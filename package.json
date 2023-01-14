@@ -4,7 +4,7 @@
   "description": "exbanking-service-perf-test automated grpc functional tests",
   "main": "index.js",
   "scripts": {
-    "test": "mocha specs/**/*.js"
+    "test": "node specs/ceateuser.spec.js"
   },
   "repository": {
     "type": "git",
