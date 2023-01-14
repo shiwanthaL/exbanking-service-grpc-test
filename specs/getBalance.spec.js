@@ -44,7 +44,7 @@ async function getBalance() {
         });
     });
 }
-describe('AAs a customer ' +
+describe('As a customer ' +
     'i want to give my account details ' +
     'So that i can see account balance amount with account details (acct_no, acct_name)', () => {
 

@@ -5,7 +5,7 @@ describe('As a customer ' +
     'So that i can see account balance amount with account details (acct_no, acct_name)', () => {
 
     it("add processing method to the normal catalog and save", () => {
-        cy.exec('node ./specs/balance.spec.js').then((result) => {
+        cy.exec('node ./specs/getBalance.spec.js').then((result) => {
             console.log("result", result)
         })
     })
@@ -16,7 +16,7 @@ describe('AAs a customer ' +
     'So that i can see account balance amount with account details (acct_no, acct_name)', () => {
 
     it("add processing method to the normal catalog and save", () => {
-        cy.exec('node ./specs/balance.spec.js').then((result) => {
+        cy.exec('node ./specs/getBalance.spec.js').then((result) => {
             console.log("result", result)
         })
     })
