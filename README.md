@@ -25,10 +25,6 @@ Use the package manager [npm](https://www.npmjs.com/) to install this project an
 $ node -v
 ```
 Go to exbanking-service-grpc-test root directory using separate bash and execute below commands
-```bash
-$ cd specs/
-```
-Note: Please make sure to navigate './specs' directory before execute test execution
 
 Execute Exbanking service level smoke test suite
 ```bash
