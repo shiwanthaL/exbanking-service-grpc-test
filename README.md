@@ -30,9 +30,9 @@ $ cd specs/
 ```
 Note: Please make sure to navigate './specs' directory before execute test execution
 
-Execute /create_user service endpoint functional testcases
+Execute Exbanking service level smoke test suite
 ```bash
-$ node ceateuser.spec.js
+$ npm run test
 ```
 
 
