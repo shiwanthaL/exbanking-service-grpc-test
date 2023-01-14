@@ -30,7 +30,7 @@ Execute Exbanking service level smoke test suite
 ```bash
 $ npm run test
 ```
-
+![img.png](cypress/support/img-result.png)
 
 
 ## License
