@@ -38,5 +38,8 @@ $ npm run test
 Execution result will gererate under root directory folder called "YOLOReport"
 Open result.html file in browser
 
+![img.png](cypress/support/report.png)
+
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
