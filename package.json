@@ -4,7 +4,8 @@
   "description": "exbanking-service-perf-test automated grpc functional tests",
   "main": "index.js",
   "scripts": {
-    "test": "node specs/ceateuser.spec.js"
+    "test": "node specs/ceateuser.spec.js",
+    "cy:run": "cypress run"
   },
   "repository": {
     "type": "git",
