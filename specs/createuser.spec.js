@@ -3,6 +3,21 @@ const loader = require('@grpc/proto-loader');
 const grpc = require('@grpc/grpc-js');
 var fs = require('fs');
 
+
+describe('As a customer ' +
+    'I want to give my personal details to create bank account ' +
+    'So that i make transactions via bank account (name, email, passport)', () => {
+
+    it("Successfully create customer bank account", () => {
+        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
+        createUser().then(r => {
+            console.log("new res", r)
+        })
+    });
+});
+
+
+
 /**
  * Testcase : Customer create new bank account by giving own personal details
  * Expected Result : {"fullName":"<>","accountNo":"<>>","ibanNo":"<>>","swiftCode":"<>>","bankName":"<>>","branchName":"<>>","balance":"<>>","email":"<>","passport":"<>"}
@@ -47,14 +62,3 @@ async function createUser() {
 
 
 
-describe('As a customer ' +
-    'i want to give my account details ' +
-    'So that i can see account balance amount with account details (acct_no, acct_name)', () => {
-
-    it("add processing method to the normal catalog and save", () => {
-        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
-        createUser().then(r => {
-            console.log("new res", r)
-        })
-    });
-});

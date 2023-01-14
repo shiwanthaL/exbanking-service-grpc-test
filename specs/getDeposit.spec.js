@@ -3,6 +3,21 @@ const loader = require('@grpc/proto-loader');
 const grpc = require('@grpc/grpc-js');
 var fs = require('fs');
 
+
+describe('As a customer ' +
+    'I want to give my account details ' +
+    'So that i can make money deposit into my saving account (name, amount)', () => {
+
+    it("Successfully deposit to given bank account and verify deposit amount is correct", () => {
+        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
+        getDeposit().then(r => {
+            console.log("new res", r)
+        })
+    });
+});
+
+
+
 /**
  * Testcase : Customer want bank deposit money by giving bank account details
  * Expected Result : {"fullName":"<name>","prior_amount":"<prior_balance>","current_balance":"<current_balance>"}
@@ -44,14 +59,3 @@ async function getDeposit() {
         });
     });
 }
-describe('As a customer ' +
-    'i want to give my account details ' +
-    'So that i can see account balance amount with account details (acct_no, acct_name)', () => {
-
-    it("add processing method to the normal catalog and save", () => {
-        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
-        getDeposit().then(r => {
-            console.log("new res", r)
-        })
-    });
-});

@@ -3,6 +3,21 @@ const loader = require('@grpc/proto-loader');
 const grpc = require('@grpc/grpc-js');
 var fs = require('fs');
 
+
+describe('As a customer ' +
+    'I want to give my account details ' +
+    'So that i can see account balance amount with account details (acct_no, acct_name)', () => {
+
+    it("Successfully verify given bank account available balance", () => {
+        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
+        getBalance().then(r => {
+            console.log("new res", r)
+        })
+    });
+});
+
+
+
 /**
  * Testcase : Customer verify bank account balance using own account details
  * Expected Result : {"fullName":"<full_name>>","accountNo":"<account_no>,"balance":"<balance>"}
@@ -45,14 +60,4 @@ async function getBalance() {
     });
 }
 
-describe('As a customer ' +
-    'i want to give my account details ' +
-    'So that i can see account balance amount with account details (acct_no, acct_name)', () => {
 
-    it("add processing method to the normal catalog and save", () => {
-        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
-        getBalance().then(r => {
-            console.log("new res", r)
-        })
-    });
-});

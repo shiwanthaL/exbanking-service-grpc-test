@@ -4,7 +4,7 @@ describe('As a customer ' +
 
     it("add processing method to the normal catalog and save", () => {
         console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
-        cy.exec('node ./specs/ceateuser.spec.js').then((result) => {
+        cy.exec('node ./specs/createuser.spec.js').then((result) => {
             console.log("result", result)
         })
     });

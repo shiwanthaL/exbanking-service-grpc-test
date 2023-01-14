@@ -48,6 +48,7 @@ jspm_packages/
 
 # TypeScript v1 declaration files
 typings/
+.YOLOReport/
 
 # TypeScript cache
 *.tsbuildinfo
@@ -111,3 +112,4 @@ dist
 node_modules
 
 .npmrc
+.cypress/fixtures/

@@ -4,7 +4,7 @@
   "description": "exbanking-service-perf-test automated grpc functional tests",
   "main": "index.js",
   "scripts": {
-    "test": "mocha specs/*.spec.js",
+    "test": "mocha specs/*.spec.js --reporter mochawesome --reporter-options reportDir=YOLOReport,reportFilename=reportFile, charts=true",
     "cy:run": "cypress run"
   },
   "repository": {
@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/shiwanthaL/exbanking-service-grpc-test/issues"
   },
-  "homepage": "https://github.com/shiwanthaL/exbanking-service-grpc-test#readme"
+  "homepage": "https://github.com/shiwanthaL/exbanking-service-grpc-test#readme",
+  "devDependencies": {
+    "mochawesome": "^7.1.3"
+  }
 }

@@ -3,12 +3,28 @@ const loader = require('@grpc/proto-loader');
 const grpc = require('@grpc/grpc-js');
 var fs = require('fs');
 
+
+describe('As a customer ' +
+    'I want to give bank beneficiary details and amount' +
+    'So that i make online transfer to beneficiary account (name , amount, to_account, remark)', () => {
+
+    it("Successfully make transfer to beneficiary bank account", () => {
+        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
+        getSend().then(r => {
+            console.log("new res", r)
+        })
+    });
+});
+
+
+
+
 /**
  * Testcase : Customer want to make money transfer by giving beneficiary account details
  * Expected Result : {"from_account":"<my_acc>","beneficiary_account":"<beneficiary_acc>","transaction_remark":"<remark>","reference_no":"<ref>","transfer_amount":"<amount>>","current_balance":"<current_balance>"}
  * @return {Promise<unknown>}
  */
-async function getWithdraw() {
+async function getSend() {
     console.log("===== Start Testcase : /send service functionality ========");
     console.log("Protobuf Request Payload is");
     console.log(pbReq);
@@ -44,14 +60,3 @@ async function getWithdraw() {
         });
     });
 }
-describe('As a customer ' +
-    'i want to give my account details ' +
-    'So that i can see account balance amount with account details (acct_no, acct_name)', () => {
-
-    it("add processing method to the normal catalog and save", () => {
-        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
-        getWithdraw().then(r => {
-            console.log("new res", r)
-        })
-    });
-});

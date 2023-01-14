@@ -3,6 +3,23 @@ const loader = require('@grpc/proto-loader');
 const grpc = require('@grpc/grpc-js');
 var fs = require('fs');
 
+
+describe('As a customer ' +
+    'I want to give my account details ' +
+    'So that i can make money withdraw from my saving account (name, amount)', () => {
+
+    it("Successfully withdraw from given bank account and verify current amount is correct", () => {
+        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
+        getWithdraw().then(r => {
+            console.log("new res", r)
+        })
+    });
+});
+
+
+
+
+
 /**
  * Testcase : Customer want bank withdraw money by giving bank account details
  * Expected Result : {"fullName":"<name>","prior_amount":"<prior_amount>","current_balance":"<current balance>"}
@@ -44,14 +61,3 @@ async function getWithdraw() {
         });
     });
 }
-describe('As a customer ' +
-    'i want to give my account details ' +
-    'So that i can see account balance amount with account details (acct_no, acct_name)', () => {
-
-    it("add processing method to the normal catalog and save", () => {
-        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
-        getWithdraw().then(r => {
-            console.log("new res", r)
-        })
-    });
-});
