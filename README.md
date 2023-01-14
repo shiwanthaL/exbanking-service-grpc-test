@@ -36,3 +36,6 @@ $ node ceateuser.spec.js
 ```
 
 
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
