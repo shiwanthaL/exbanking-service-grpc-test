@@ -13,7 +13,7 @@ async function getBalance() {
     console.log("Protobuf Request Payload is");
     console.log(pbReq);
     return new Promise(function (resolve) {
-        const packageDefinition = loader.loadSync('../pb/proto/banking-service.proto', {
+        const packageDefinition = loader.loadSync('./pb/proto/banking-service.proto', {
             keepCase: true,
             longs: String,
             enums: String,
@@ -33,7 +33,7 @@ async function getBalance() {
             console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
             console.log(JSON.stringify(response)+"\n");
 
-            fs.writeFileSync('../cypress/fixtures/balanceRes.json', JSON.stringify(response), function (err) {
+            fs.writeFileSync('./cypress/fixtures/balanceRes.json', JSON.stringify(response), function (err) {
                 if (err != null) {
                     console.log("RECEIVED GRPC SUCCESSFUL SERVICE RESPONSE");
                 }else{
@@ -44,6 +44,15 @@ async function getBalance() {
         });
     });
 }
-getBalance().then(r => {
-    console.log("new res", r)
-})
+
+describe('As a customer ' +
+    'i want to give my account details ' +
+    'So that i can see account balance amount with account details (acct_no, acct_name)', () => {
+
+    it("add processing method to the normal catalog and save", () => {
+        console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
+        getBalance().then(r => {
+            console.log("new res", r)
+        })
+    });
+});
