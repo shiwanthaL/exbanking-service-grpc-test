@@ -1,7 +1,7 @@
 # exbanking-service-grpc-test
 *exbanking-service-grpc-test* automated suite will maintain Exbanking service grpc functional test cases. This gRPC functional test automation project is a combination of JavaScript programming language and Cypress.io In addition, to enable a grpc mock  client, a customized solution with @grpc/proto-loader and @grpc/grpc-js npm lib are being used in this async test automation platform.
 
-## Project demo gRPC protobuf API functional testing with Cypress.io + Grpc/grpc-js
+## Project Demo gRPC protobuf API functional testing with Cypress.io
 
 <p align="center">
   <a href="https://vimeo.com/manage/videos/789461649">
