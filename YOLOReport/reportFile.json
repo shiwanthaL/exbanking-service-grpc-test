@@ -1,0 +1,260 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-15T15:27:38.948Z",
+    "end": "2023-01-15T15:27:39.054Z",
+    "duration": 106,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "58a8703d-5136-4d0c-80dd-e3753da9a4c2",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a0408ac-50aa-4cc6-b61c-f1902554684f",
+          "title": "As a customer I want to give my personal details to create bank account So that i make transactions via bank account (name, email, passport)",
+          "fullFile": "H:\\yolo-practical-test\\project-git\\exbanking-service-grpc-test\\specs\\createuser.spec.js",
+          "file": "\\specs\\createuser.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully create customer bank account",
+              "fullTitle": "As a customer I want to give my personal details to create bank account So that i make transactions via bank account (name, email, passport) Successfully create customer bank account",
+              "timedOut": false,
+              "duration": 28,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"<-- <-- <-- <-- Found Response --> --> --> --> \");\ncreateUser().then(r => {\n    console.log(\"new res\", r)\n})",
+              "err": {},
+              "uuid": "b6d25d0d-cdfb-4c59-918b-566952c5ecc6",
+              "parentUUID": "3a0408ac-50aa-4cc6-b61c-f1902554684f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b6d25d0d-cdfb-4c59-918b-566952c5ecc6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "5bace2b6-7837-486a-bfd6-b607fdcca2ff",
+          "title": "As a customer I want to give my account details So that i can see account balance amount with account details (acct_no, acct_name)",
+          "fullFile": "H:\\yolo-practical-test\\project-git\\exbanking-service-grpc-test\\specs\\getBalance.spec.js",
+          "file": "\\specs\\getBalance.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully verify given bank account available balance",
+              "fullTitle": "As a customer I want to give my account details So that i can see account balance amount with account details (acct_no, acct_name) Successfully verify given bank account available balance",
+              "timedOut": false,
+              "duration": 7,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"<-- <-- <-- <-- Found Response --> --> --> --> \");\ngetBalance().then(r => {\n    console.log(\"new res\", r)\n})",
+              "err": {},
+              "uuid": "27b8c15b-9ddf-4bfd-9955-582a8625532c",
+              "parentUUID": "5bace2b6-7837-486a-bfd6-b607fdcca2ff",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "27b8c15b-9ddf-4bfd-9955-582a8625532c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e6d9775b-3ea2-4829-bff4-47925aae76da",
+          "title": "As a customer I want to give my account details So that i can make money deposit into my saving account (name, amount)",
+          "fullFile": "H:\\yolo-practical-test\\project-git\\exbanking-service-grpc-test\\specs\\getDeposit.spec.js",
+          "file": "\\specs\\getDeposit.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully deposit to given bank account and verify deposit amount is correct",
+              "fullTitle": "As a customer I want to give my account details So that i can make money deposit into my saving account (name, amount) Successfully deposit to given bank account and verify deposit amount is correct",
+              "timedOut": false,
+              "duration": 6,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"<-- <-- <-- <-- Found Response --> --> --> --> \");\ngetDeposit().then(r => {\n    console.log(\"new res\", r)\n})",
+              "err": {},
+              "uuid": "1aa2ebc6-32ad-434b-b67f-2cb0e50a3c5e",
+              "parentUUID": "e6d9775b-3ea2-4829-bff4-47925aae76da",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1aa2ebc6-32ad-434b-b67f-2cb0e50a3c5e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "859e5b34-67c2-4531-bac8-9baf0ee53097",
+          "title": "As a customer I want to give bank beneficiary details and amountSo that i make online transfer to beneficiary account (name , amount, to_account, remark)",
+          "fullFile": "H:\\yolo-practical-test\\project-git\\exbanking-service-grpc-test\\specs\\getSend.spec.js",
+          "file": "\\specs\\getSend.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully make transfer to beneficiary bank account",
+              "fullTitle": "As a customer I want to give bank beneficiary details and amountSo that i make online transfer to beneficiary account (name , amount, to_account, remark) Successfully make transfer to beneficiary bank account",
+              "timedOut": false,
+              "duration": 7,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"<-- <-- <-- <-- Found Response --> --> --> --> \");\ngetSend().then(r => {\n    console.log(\"new res\", r)\n})",
+              "err": {},
+              "uuid": "636d2c3c-41f9-4833-82f2-b780b9977880",
+              "parentUUID": "859e5b34-67c2-4531-bac8-9baf0ee53097",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "636d2c3c-41f9-4833-82f2-b780b9977880"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e0ff7d6c-1ae7-46ba-a8a2-9381a32398c6",
+          "title": "As a customer I want to give my account details So that i can make money withdraw from my saving account (name, amount)",
+          "fullFile": "H:\\yolo-practical-test\\project-git\\exbanking-service-grpc-test\\specs\\getWithdraw.spec.js",
+          "file": "\\specs\\getWithdraw.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully withdraw from given bank account and verify current amount is correct",
+              "fullTitle": "As a customer I want to give my account details So that i can make money withdraw from my saving account (name, amount) Successfully withdraw from given bank account and verify current amount is correct",
+              "timedOut": false,
+              "duration": 5,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"<-- <-- <-- <-- Found Response --> --> --> --> \");\ngetWithdraw().then(r => {\n    console.log(\"new res\", r)\n})",
+              "err": {},
+              "uuid": "429a5892-618b-492c-a2de-3ddef0472ae3",
+              "parentUUID": "e0ff7d6c-1ae7-46ba-a8a2-9381a32398c6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "429a5892-618b-492c-a2de-3ddef0472ae3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "reportFile",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "YOLOReport",
+        "reportFilename": "reportFile",
+        "": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
