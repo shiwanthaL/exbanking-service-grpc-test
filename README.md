@@ -6,13 +6,15 @@ Clone [exbanking-service-grpc-test](https://github.com/shiwanthaL/exbanking-serv
 ```bash
 $ git clone https://github.com/shiwanthaL/exbanking-service-grpc-test.git
 ```
-
+### Project structure 
+Understand gRPC functional service test project major folder hierarchy 
+![img.png](cypress/support/strucure.png)
 ## Step 02 : gRPC Server Setup and Installation
 As a Prerequisite to execute functional testcases, please follow below instructions to get up and running Exbank gRPC endpoint,
 
 1. Open separate bach (cmd) window on project root directory
 
-2. Get up and running gRPC service endpoints using below command
+2. Get up and running gRPC service endpoints using below command (***Don't close terminal until testcases execution complete***)
 ```bash
 $ java -jar exbanking-service-protobuf-endpoints.jar
 ```
@@ -20,11 +22,11 @@ $ java -jar exbanking-service-protobuf-endpoints.jar
 
 ## Step 03 : Execute Exbank service level functional testcases
 
-Use the package manager [npm](https://www.npmjs.com/) to install this project and make sure installed NodeJS setup in running machine
+Make sure installed NodeJS already setup in running machine
 ```bash
 $ node -v
 ```
-Go to exbanking-service-grpc-test root directory using separate bash and execute below commands
+Open new bash terminal and go to **exbanking-service-grpc-test root directory** using separate bash and execute below commands
 ```bash
 $ npm install
 ```
@@ -39,6 +41,10 @@ Execution result will gererate under root directory folder called "YOLOReport"
 Open result.html file in browser
 
 ![img.png](cypress/support/report.png)
+
+NPM Used major libraries
+
+[@grpc/grpc-js](https://www.npmjs.com/package/@grpc/grpc-js)  |  [@grpc/proto-loader](https://www.npmjs.com/package/@grpc/proto-loader)  |  [node-grpc-client](https://www.npmjs.com/package/node-grpc-client)  |  [cypress-protobuf](https://www.npmjs.com/package/cypress-protobuf)  |  [mocha](https://www.npmjs.com/package/mocha)
 
 
 ## License
