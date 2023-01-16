@@ -2,6 +2,8 @@ let pbReq = require('../cypress/requests/depositReq.json');
 const loader = require('@grpc/proto-loader');
 const grpc = require('@grpc/grpc-js');
 var fs = require('fs');
+const {expect} = require("chai");
+const pbRes = require("../cypress/fixtures/depositRes.json");
 
 
 describe('As a customer ' +
@@ -49,6 +51,10 @@ async function getDeposit() {
             console.log(JSON.stringify(response)+"\n");
 
             fs.writeFileSync('./cypress/fixtures/depositRes.json', JSON.stringify(response), function (err) {
+
+                //Response validation with Chai.expect() assertion
+                expect(pbRes.fullName).to.be.equal(pbReq.fullName);
+
                 if (err != null) {
                     console.log("RECEIVED GRPC SUCCESSFUL SERVICE RESPONSE");
                 }else{

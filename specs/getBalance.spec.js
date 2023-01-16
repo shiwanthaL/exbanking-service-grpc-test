@@ -2,6 +2,8 @@ let pbReq = require('../cypress/requests/balanceReq.json');
 const loader = require('@grpc/proto-loader');
 const grpc = require('@grpc/grpc-js');
 var fs = require('fs');
+const {expect} = require("chai");
+const pbRes = require("../cypress/fixtures/balanceRes.json");
 
 
 describe('As a customer ' +
@@ -49,6 +51,10 @@ async function getBalance() {
             console.log(JSON.stringify(response)+"\n");
 
             fs.writeFileSync('./cypress/fixtures/balanceRes.json', JSON.stringify(response), function (err) {
+
+                //Response validation with Chai.expect() assertion
+                expect(pbRes.fullName).to.be.equal(pbReq.fullName);
+
                 if (err != null) {
                     console.log("RECEIVED GRPC SUCCESSFUL SERVICE RESPONSE");
                 }else{

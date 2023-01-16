@@ -2,7 +2,8 @@ let pbReq = require('../cypress/requests/withdrawReq.json');
 const loader = require('@grpc/proto-loader');
 const grpc = require('@grpc/grpc-js');
 var fs = require('fs');
-
+const {expect} = require("chai");
+const pbRes = require("../cypress/fixtures/withdrawRes.json");
 
 describe('As a customer ' +
     'I want to give my account details ' +
@@ -51,6 +52,10 @@ async function getWithdraw() {
             console.log(JSON.stringify(response)+"\n");
 
             fs.writeFileSync('./cypress/fixtures/withdrawRes.json', JSON.stringify(response), function (err) {
+
+                //Response validation with Chai.expect() assertion
+                expect(pbRes.fullName).to.be.equal(pbReq.fullName);
+
                 if (err != null) {
                     console.log("RECEIVED GRPC SUCCESSFUL SERVICE RESPONSE");
                 }else{

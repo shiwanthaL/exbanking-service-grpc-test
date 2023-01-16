@@ -1,6 +1,8 @@
 let pbReq = require('../cypress/requests/createReq.json');
 const loader = require('@grpc/proto-loader');
 const grpc = require('@grpc/grpc-js');
+const expect = require('chai').expect
+let pbRes = require('../cypress/fixtures/createRes.json');
 var fs = require('fs');
 
 
@@ -43,12 +45,18 @@ async function createUser() {
         )
         console.log("Connection Established : 'localhost:9090' insecure tunnel mode...");
         client.create_user(pbReq, (err, response) => {
-
-            console.log(client);console.log("");
             console.log("<-- <-- <-- <-- Found Response --> --> --> --> ");
             console.log(JSON.stringify(response)+"\n");
 
+
+
             fs.writeFileSync('./cypress/fixtures/createRes.json', JSON.stringify(response), function (err) {
+
+                //Response validation with Chai.expect() assertion
+                expect(pbRes.fullName).to.be.equal(pbReq.fullName);
+                expect(pbRes.passport).to.be.equal(pbReq.passport);
+                expect(pbRes.email).to.be.equal(pbReq.email);
+
                 if (err != null) {
                     console.log("RECEIVED GRPC SUCCESSFUL SERVICE RESPONSE");
                 }else{
